@@ -1278,10 +1278,10 @@ zh-TW:
     scopes:
       profile: 讀取您的基本賬戶信息(如姓名, 郵件地址)和賬戶餘額
       history: 讀取您的掛單和成交記錄
-      trade: 代表您在Peatio上進行交易
+      trade: 代表您在BTCTW上進行交易
     authorizations:
       new:
-        title: Peatio 第三方應用授權
+        title: BTCTW 第三方應用授權
         authorize_html: 確定要授權 <strong class='text-info'>%{name}</strong> 使用您的賬戶嗎？
         scopes: '該應用將獲得如下權限：'
         authorize: 同意
@@ -1457,12 +1457,12 @@ zh-TW:
       thanks_for_submit_ticket: 感謝您的反饋。我們會盡快處理，並第一時間告知您相關進展。
   token_mailer:
     activation:
-      subject: "[Peatio] 帳號激活"
-      click_to_verify: '感謝您註冊 Peatio，趕快點擊下面的鏈接驗證您的E-mail吧：'
+      subject: "[BTCTW] 帳號激活"
+      click_to_verify: '感謝您註冊 BTCTW，趕快點擊下面的鏈接驗證您的E-mail吧：'
       unable_to_click: 如果鏈接無法點擊，請完整拷貝到瀏覽器地址欄裡直接訪問。
       link_expire: 鏈接30分鐘之內有效。
     reset_password:
-      subject: "[Peatio] 請重置您的密碼"
+      subject: "[BTCTW] 請重置您的密碼"
       hi: 您好
       follow_the_link: '請使用下面的連接，在30分鐘之內嘗試重置您的登錄密碼：'
   withdraw_mailer:
@@ -1493,9 +1493,9 @@ zh-TW:
   gon:
     ask: 賣出
     bid: 買入
-    brand: Peatio交易所
+    brand: BTCTW交易所
     notification:
-      title: Peatio交易所
+      title: BTCTW交易所
       enabled: 實時更新已開啟。
       new_trade: "您的%{kind}委託 #%{id} 以 %{price} %{quote_unit} 價格成交，%{kind} %{volume} %{base_unit}。"
   back: 返回
