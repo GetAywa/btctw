@@ -266,6 +266,7 @@ zh-TW:
           sum: 掛單總限額 %{l} ~ %{h}
           precision: 最低精度為 %{p}
   banks:
+    post: 700中華郵政
     bktw: 004臺灣銀行
     lbot: 005臺灣土地銀行
     tacb: 006合作金庫商業銀行
