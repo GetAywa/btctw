@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.0.12'
 gem 'rails-i18n'
-
-gem 'mysql2'
+ 
+gem 'mysql2', '~> 0.3.20'
 gem 'daemons-rails'
 gem 'redis-rails'
 
@@ -95,6 +95,7 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'poltergeist'
+  gem 'globalize-versioning'
 
   # rspec-rails rely on test-unit if rails version less then 4.1.0
   # but test-unit has been removed from ruby core since 2.2.0
