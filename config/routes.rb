@@ -36,7 +36,7 @@ Peatio::Application.routes.draw do
     resources :activations, only: [:new, :edit, :update]
   end
 
-  get '/documents/api_v2'
+#  get '/documents/api_v2'
   get '/documents/websocket_api'
   get '/documents/oauth'
   resources :documents, only: [:show]
@@ -112,6 +112,6 @@ Peatio::Application.routes.draw do
 
   draw :admin
 
-  mount APIv2::Mount => APIv2::Mount::PREFIX
+#  mount APIv2::Mount => APIv2::Mount::PREFIX
 
 end
