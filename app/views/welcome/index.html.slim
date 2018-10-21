@@ -1,18 +1,273 @@
-header.text-center
-  .container
-    a href='http://btctw.com/'
-      img src='#{image_path 'logo.png'}' width='336px'
-    section
-      - Rails.configuration.i18n.available_locales.each do |locale|
-        h3 = t(:slogan, locale: locale)
-    #getstart.row
-      - unless current_user
-        .col-xs-4.col-xs-offset-8
-          a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
-        .col-xs-4
-          a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
-      - else
-        .col-xs-6.col-xs-offset-9.text-center
-          a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
-          a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-          a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    title
+      | 比特幣台灣
+    meta[name="description" content=""]
+    meta[name="author" content=""]
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"]
+    link[rel="stylesheet" href="bootstrap.css"]
+    link[rel="stylesheet" href="styles.css"]
+    link[rel="shortcut icon" href="images/icons/favicon.ico"]
+    link[rel="apple-touch-icon" href="images/icons/apple-touch-icon.png"]
+    link[rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png"]
+    link[rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png"]
+    script[type="text/javascript"]
+      |  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXXXX-X']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); 
+  body
+    header#top.container
+      .row
+        .span4
+          h1.logo
+            a.ir[href=""]
+              | 比特幣台灣
+        .span8
+          ul.header-information
+            li.phone-info
+              p
+                | 需要協助嗎?
+              p
+                strong
+                  | 電話：02-27111556
+            li.email-info
+              p
+                | Email:
+              p
+                a[href="mailto:support@btctw.com"]
+                  | support@btctw.com
+    .banner-container
+      .container
+        .row
+          .span7.clearfix.header-contents
+            h1
+              | 台灣最大的比特幣交易平台
+            h3
+              | 實體BTM + 線上交易.
+            ul.header-benefits
+              li
+                i.icon-ok
+                |  安全!
+              li
+                i.icon-ok
+                |  可靠!
+              li
+                i.icon-ok
+                |  快速!
+          .span5
+            .product-header-signup
+              h2
+              .header-cta
+                - unless current_user
+                  a href="#{signin_path}" class="big-button" role="button" = t("header.signin")
+                  p
+                  span
+                    | 或者
+                  p
+                  a href="#{signup_path}" class="big-button" role="button" = t("header.signup")
+                - else
+                  a href="#{market_path(current_market)}" class="big-button" role="button" = t("header.getstart")
+                  p
+                  a href="#{funds_path}" class="big-button" role="button" = t("header.funds")
+                  p
+                  a href="#{settings_path}" class="big-button" role="button" = t("header.settings")
+    .nav-replacement
+
+    nav.floating-nav.container
+      div
+        ul
+        a.button.nav-cta-button[href="/signup"]
+          | 加入我們! 
+          i.icon-chevron-right
+    section.container
+      h2#section-tour.spy-hook
+        | BTM操作教學說明
+      .tabbable.row
+        .span3.tour-navigation
+          ul
+            li.active
+              a[href="#tour1" data-toggle="tab"]
+                | 開始
+            li
+              a[href="#tour2" data-toggle="tab"]
+                | 掃QRCode
+            li
+              a[href="#tour3" data-toggle="tab"]
+                | 確認錢包地址
+            li
+              a[href="#tour4" data-toggle="tab"]
+                | 放入紙鈔
+            li
+              a[href="#tour5" data-toggle="tab"]
+                | 發送比特幣
+            li
+              a[href="#tour6" data-toggle="tab"]
+                | 交易完成!
+        .tab-content.span9
+          #tour1.tab-pane.active.clearfix
+            h3
+              | 第一步
+            p
+              | 找到BTM並帶上:
+            ol.basic-list
+              li
+                | 比特幣Wallet ID
+              li
+                | 紙鈔，最少$100
+            p
+              | 點選開始
+            figure.figure-left
+              img[src='#{image_path 'demo/step1.jpg'}' alt="step1"]
+          #tour2.tab-pane
+            h3
+              | 第二步
+            p
+              strong
+                | 第二步說明
+          #tour3.tab-pane
+            h3
+              | 第三步
+            p
+              strong
+                | 第三步說明
+          #tour4.tab-pane
+            h3
+              | 第四步
+            p
+              strong
+                | 第四步說明
+          #tour5.tab-pane
+            h3
+              | 第五步
+            p
+              strong
+                | 第五步說明
+          #tour6.tab-pane
+            h3
+              | 第六步
+            p
+              strong
+                | 第六步說明
+      hr.hr-dots
+    section.container.custom-tabs
+      h2#section-tabs.spy-hook
+        | BTM哪裡找?
+      .tabbable
+        ul.nav.nav-tabs
+          li.active
+            a[href="#tab1" data-toggle="tab"]
+              | 台北
+          li
+            a[href="#tab2" data-toggle="tab"]
+              | 台南
+        .tab-content
+          #tab1.tab-pane.active.clearfix
+            center
+              .iframe-rwd
+                .mapouter
+                  .gmap_canvas
+                    iframe#gmap_canvas[width="600" height="500" src="https://maps.google.com/maps?q=忠孝東路四段89號1樓&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"]
+                    a[href="http://www.embedgooglemap.net"]
+                      | embedgooglemap.net
+                    style
+                      | .mapouter{overflow:hidden;height:500px;width:600px;}.gmap_canvas {background:none!important;height:500px;width:600px;}
+          #tab2.tab-pane.clearfix
+            #tab1.tab-pane.active.clearfix
+                center
+                  .iframe-rwd
+                    .mapouter
+                      .gmap_canvas
+                        iframe#gmap_canvas[width="600" height="500" src="https://maps.google.com/maps?q=台南市中西區中山路11號&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"]
+                        a[href="http://www.embedgooglemap.net"]
+                          | embedgooglemap.net
+                      style
+                        | .mapouter{overflow:hidden;height:500px;width:600px;}.gmap_canvas {background:none!important;height:500px;width:600px;}
+      hr.hr-dots
+    section.container
+      h2#section-features.spy-hook
+        | 常見問題
+      .feature-list
+        .row
+          .span6
+            figure
+              
+              img[src='#{image_path 'icons/custom/6.png'}' alt=""]
+            h3
+              | FAQ1
+            p
+              | 這裡是回答的答案說明
+          .span6
+            figure
+              img[src='#{image_path 'icons/custom/6.png'}' alt=""]
+            h3
+              | FAQ2
+            p
+              | 這裡是回答的答案說明
+        .row
+          .span6
+            figure
+              img[src='#{image_path 'icons/custom/6.png'}' alt=""]
+            h3
+              | FAQ3
+            p
+              | 這裡是回答的答案說明
+          .span6
+            figure
+              img[src='#{image_path 'icons/custom/6.png'}' alt=""]
+            h3
+              | FAQ4
+            p
+              | 這裡是回答的答案說明
+      hr.hr-dots
+    section.container
+      h2#section-testimonials.spy-hook
+        | 使用者心得分享
+      .slider-wrapper
+        ul.slider
+          li
+            p
+              | "在台北的頂好名店城門口有兩台販賣比特幣的自動販賣機！ 操作起來簡單又輕鬆，且賣價比幣託跟Maicoin便宜！" 
+            p.author
+              | - 吳旻津
+          li
+            p
+              | "速度快，方便!"
+            p.author
+              |  – Confucius
+          li
+            p
+              | "沒想到比特幣也有ATM!"
+            p.author
+              | - Josh
+      ul.slider-controls
+      hr.hr-dots
+    section.container
+      h2#section-contact.spy-hook
+        | 聯絡我們
+      .row
+        .span8
+          ul.footer-information
+            li.phone-info
+              p
+                | 電話:
+              p
+                strong
+                  | 02-27111556
+            li.email-info
+              p
+                | Email:
+              p
+                a[href="mailto:support@btctw.com"]
+                  | support@btctw.com
+        .span4
+          ul.social-links.clearfix
+            li
+              p
+                | 或者, 在這邊找到我們
+              a.facebook[href="https://www.facebook.com/BTCTWCOM/"]
+                | Facebook
+    .copyright-container
+      p
+        | © 2018 BTCTW All rights reserved.
+    script[src="jquery-1.8.0.min.js"]
+    script[src="functions.js"]

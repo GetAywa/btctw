@@ -50,6 +50,23 @@ zh-TW:
        cdib: 040臺灣工業銀行
        eroc: 015中國輸出入銀行
        none: 018全國農業金庫
+       ctbc: 822中國信託银行
+       cbc: 建设银行
+       bc: 中国银行
+       bcm: 交通银行
+       abc: 农业银行
+       cmb: 招商银行
+       cmbc: 民生银行
+       cncb: 中信银行
+       hxb: 华夏银行
+       cib: 兴业银行
+       spdb: 浦东发展银行
+       bob: 北京银行
+       ceb: 光大银行
+       sdb: 深圳发展银行
+       pab: 平安银行
+       gdb: 广东发展银行
+       psbc: 中国邮政储蓄银行
     fund_sources:
       manage_bank_account: 編輯銀行帳號
       manage_bank_account_desc: 通過增加提款銀行帳戶，方便快速提款！
