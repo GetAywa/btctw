@@ -451,7 +451,7 @@ zh-CN:
     bank:
       key: 银行转账
       title: 银行转账充值
-      intro: 通过银行转账的方式，从您的银行账户充值人民币到您的貔貅账户。
+      intro: 通过银行转账的方式，从您的银行账户充值人民币到您的比特币台灣账户。
       latency: 10 分钟到账
       transfer: 人工处理
       go: 立即充值
@@ -704,7 +704,7 @@ zh-CN:
         title: CNY资产清单
         intro: 查看交易所全部CNY资产清单
         total: CNY总资产
-        description: " <p>每位登录貔貅的用户可通过查询貔貅唯一开户银行余额监督我们的服务。</p> <p>开户银行： %{bank}</p> <p>开户帐号： %{address}</p> <p>查询密码： %{password}</p> <p>查询电话： %{tel}</p>"
+        description: " <p>每位登录比特币台灣的用户可通过查询比特币台灣唯一开户银行余额监督我们的服务。</p> <p>开户银行： %{bank}</p> <p>开户帐号： %{address}</p> <p>查询密码： %{password}</p> <p>查询电话： %{tel}</p>"
       partial_tree:
         success: '获取成功！验证数据生成时间为：%{timestamp}'
     funds:
@@ -1365,41 +1365,41 @@ zh-CN:
       truncate: "..."
   mailer:
     dear_user: 您好,
-    signature: 貔貅团队
+    signature: 比特币台灣团队
     please_contact: 如果此次登录不是您本人操作，请马上<a href="mailto:%{contact_mail}">联系我们</a>。
     footer: 此邮件由系统自动发出，请勿直接回复。 有问题请<a href="mailto:%{contact_mail}">联系我们</a>。
   comment_mailer:
     admin_notification:
-      subject: "[PEATIO] 用户回复了服务单"
+      subject: "[BTCTW] 用户回复了服务单"
       notification_content: 用户 %{email} 回复了服务单，详情请查看链接：
     user_notification:
-      subject: "[PEATIO] 您的服务单有了新的回复"
+      subject: "[BTCTW] 您的服务单有了新的回复"
       notification_content: '您的服务单有一条新的回复, 请在下方链接查看详情：'
   deposit_mailer:
     accepted:
-      subject: "[貔貅] 您的充值已经到账"
+      subject: "[比特币台灣] 您的充值已经到账"
       content: 您的 %{currency} 已经到账.
   member_mailer:
     notify_signin:
-      subject: "[PEATIO] 您刚刚成功登录"
+      subject: "[BTCTW] 您刚刚成功登录"
       just_signed_in: 您刚刚成功登录了。
     google_auth_activated:
-      subject: "[PEATIO] 绑定谷歌两步验证"
+      subject: "[BTCTW] 绑定谷歌两步验证"
       google_auth_activated: 您已绑定谷歌两步验证。
     google_auth_deactivated:
-      subject: "[PEATIO] 重置谷歌两步验证"
+      subject: "[BTCTW] 重置谷歌两步验证"
       google_auth_deactivated: 您已重置谷歌两步验证。
     sms_auth_activated:
-      subject: "[PEATIO] 绑定短信两步验证"
+      subject: "[BTCTW] 绑定短信两步验证"
       sms_auth_activated: 您已绑定短信两步验证。
     sms_auth_deactivated:
-      subject: "[PEATIO] 重置短信两步验证"
+      subject: "[BTCTW] 重置短信两步验证"
       sms_auth_deactivated: 您已重置短信两步验证。
     reset_password_done:
-      subject: "[PEATIO] 密码修改成功"
+      subject: "[BTCTW] 密码修改成功"
       successful: 您已成功修改密码。请妥善保管~
     phone_number_verified:
-      subject: "[PEATIO] 您已成功绑定手机"
+      subject: "[BTCTW] 您已成功绑定手机"
       verified: '您已成功绑定手机，号码为：%{phone_number}。'
   system_mailer:
     daily_stats:
@@ -1412,10 +1412,10 @@ zh-CN:
       trades_change_total: 交易数变动总计
   ticket_mailer:
     admin_notification:
-      subject: "[PEATIO] 用户新建了服务单"
+      subject: "[BTCTW] 用户新建了服务单"
       admin_notification_content: 用户 %{email} 新建了服务单，详情请查看链接：
     author_notification:
-      subject: "[PEATIO] 您的服务单提交成功"
+      subject: "[BTCTW] 您的服务单提交成功"
       thanks_for_submit_ticket: 感谢您的反馈。我们会尽快处理，并第一时间告知您相关进展。
   token_mailer:
     activation:
@@ -1429,19 +1429,19 @@ zh-CN:
       follow_the_link: '请使用下面的连接，在30分钟之内尝试重置您的登录密码：'
   withdraw_mailer:
     submitted:
-      subject: "[貔貅] 您的提现状态更新"
+      subject: "[比特币台灣] 您的提现状态更新"
       content: 您的%{currency}提现请求已经被成功提交，我们会尽快处理您的提现请求。谢谢您的耐心等待，如果您有任何问题，请及时与我们联系。
     processing:
-      subject: "[貔貅] 您的提现状态更新"
+      subject: "[比特币台灣] 您的提现状态更新"
       content: 您的%{currency}提现请求正在处理中，谢谢您的耐心等待，如果您有任何问题，请及时与我们联系。
     done:
-      subject: "[貔貅] 您的提现状态更新"
+      subject: "[比特币台灣] 您的提现状态更新"
       content: 您的%{currency}提现请求已经处理完毕，请查询您的账户。如果您有任何问题，请及时与我们联系。
     withdraw_state:
-      subject: "[貔貅] 您的提现状态更新"
+      subject: "[比特币台灣] 您的提现状态更新"
       your_state: '您的提现状态：'
   view_on_github: 到 Github 上查看
-  slogan: 貔貅，将致力于成为世界级的交易软件。
+  slogan: 比特币台灣，将致力于成为世界级的交易软件。
   tags:
     vip: VIP
     hero: 超级用户
@@ -1474,10 +1474,10 @@ zh-CN:
       short: "%m-%d %H:%M"
       default: "%Y-%m-%d %H:%M"
   sms:
-    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【PEATIO】'
-    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【PEATIO】'
-    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【PEATIO】'
-    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【PEATIO】'
+    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【BTCTW】'
+    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【BTCTW】'
+    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【BTCTW】'
+    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【BTCTW】'
   header:
     home: 首页
     dashboard: 控制面板
@@ -1792,7 +1792,7 @@ zh-CN:
     satoshi:
       key: 块链
       title: 比特币提现
-      intro: 将您在貔貅的比特币余额提取到您的钱包账户
+      intro: 将您在比特币台灣的比特币余额提取到您的钱包账户
       latency: 30 分钟到账
       transfer: 人工处理
       go: 立即提现

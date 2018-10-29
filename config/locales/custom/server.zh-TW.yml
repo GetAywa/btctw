@@ -308,6 +308,23 @@ zh-TW:
     cdib: 040臺灣工業銀行
     eroc: 015中國輸出入銀行
     none: 018全國農業金庫
+    icbc: 工商银行
+    cbc: 建设银行
+    bc: 中国银行
+    bcm: 交通银行
+    abc: 农业银行
+    cmb: 招商银行
+    cmbc: 民生银行
+    cncb: 中信银行
+    hxb: 华夏银行
+    cib: 兴业银行
+    spdb: 浦东发展银行
+    bob: 北京银行
+    ceb: 光大银行
+    sdb: 深圳发展银行
+    pab: 平安银行
+    gdb: 广东发展银行
+    psbc: 中国邮政储蓄银行
   market:
     currency:
       ntd: TWD
@@ -1513,7 +1530,7 @@ zh-TW:
       short: "%m-%d %H:%M"
       default: "%Y-%m-%d %H:%M"
   sms:
-    verification_code: '驗證碼為：%{code}，30分鐘內有效。（提示：工作人員不會索要，切勿洩露！）【BTCTW】'
+    verification_code: '驗證碼為：%{code}，30分鐘內有效。（提示：打死都不能說！）【BTCTW】'
     password_changed: '%{email} 您好，您已成功修改賬戶密碼，若非本人操作，您的賬戶可能存在被盜風險，請立即聯繫客服！【BTCTW】'
     deposit_done: '%{email} 您好，您於%{time}進行了（%{currency}）充值操作，金額為%{amount}。最新餘額為：%{balance}。（若非本人操作，請及時聯繫我們！）【BTCTW】'
     withdraw_done: '%{email} 您好，您於%{time}進行了（%{currency}）提現操作，金額為%{amount}。最新餘額為：%{balance}。（若非本人操作，請立即聯繫客服！）【BTCTW】'
