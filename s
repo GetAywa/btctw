@@ -1,2 +1,2 @@
-bundle exec rails server
+rails server
 

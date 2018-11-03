@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
       redirect_to settings_path
     end
   end
-
+  
   def current_user
     @current_user ||= Member.current = Member.enabled.where(id: session[:member_id]).first
   end

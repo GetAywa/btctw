@@ -1,43 +1,43 @@
-Doorkeeper.configure do
+#Doorkeeper.configure do
   # Change the ORM that doorkeeper will use.
   # Currently supported options are :active_record, :mongoid2, :mongoid3, :mongo_mapper
-  orm :active_record
+#  orm :active_record
 
   # This block will be called to check whether the resource owner is authenticated or not.
-  resource_owner_authenticator do
-    user = Member.enabled.where(id: session[:member_id]).first
-    if user && user.activated?
-      Member.current = user
-    else
-      set_redirect_to
-      redirect_to signin_path
-    end
-  end
+#  resource_owner_authenticator do
+#    user = Member.enabled.where(id: session[:member_id]).first
+#    if user && user.activated?
+#      Member.current = user
+#    else
+#      set_redirect_to
+#      redirect_to signin_path
+#    end
+#  end
 
   # If you want to restrict access to the web interface for adding oauth authorized applications, you need to declare the block below.
-  admin_authenticator do
-    user = Member.enabled.where(id: session[:member_id]).first
-    if user && user.activated? && user.admin?
-      Member.current = user
-    else
-      set_redirect_to
-      redirect_to signin_path
-    end
-  end
+#  admin_authenticator do
+#    user = Member.enabled.where(id: session[:member_id]).first
+#    if user && user.activated? && user.admin?
+#      Member.current = user
+#    else
+#      set_redirect_to
+#      redirect_to signin_path
+#    end
+#  end
 
   # Authorization Code expiration time (default 10 minutes).
-  authorization_code_expires_in 10.minutes
+#  authorization_code_expires_in 10.minutes
 
   # Access token expiration time (default 2 hours).
   # If you want to disable expiration, set this to nil.
-  access_token_expires_in 1.week
+#  access_token_expires_in 1.week
 
   # Reuse access token for the same resource owner within an application (disabled by default)
   # Rationale: https://github.com/doorkeeper-gem/doorkeeper/issues/383
   # reuse_access_token
 
   # Issue access tokens with refresh token (disabled by default)
-  use_refresh_token
+#  use_refresh_token
 
   # Provide support for an owner to be assigned to each registered application (disabled by default)
   # Optional parameter :confirmation => true (default false) if you want to enforce ownership of
@@ -48,8 +48,8 @@ Doorkeeper.configure do
   # Define access token scopes for your provider
   # For more information go to
   # https://github.com/doorkeeper-gem/doorkeeper/wiki/Using-Scopes
-  default_scopes  :profile
-  optional_scopes :history, :trade
+#  default_scopes  :profile
+#  optional_scopes :history, :trade
 
   # Change the way client credentials are retrieved from the request object.
   # By default it retrieves first from the `HTTP_AUTHORIZATION` header, then
@@ -96,6 +96,6 @@ Doorkeeper.configure do
   # Some applications require dynamic query parameters on their request_uri
   # set to true if you want this to be allowed
   # wildcard_redirect_uri false
-end
+#end
 
-require_relative '../../lib/doorkeeper/access_token'
+#require_relative '../../lib/doorkeeper/access_token'

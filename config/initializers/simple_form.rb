@@ -1,14 +1,14 @@
-require 'simple_form_extensions'
+#require 'simple_form_extensions'
 
 # Use this setup block to configure all options available in SimpleForm.
-SimpleForm.setup do |config|
+#SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
   # complete input. You can remove any component from the
   # wrapper, change the order or even add your own to the
   # stack. The options given below are used to wrap the
   # whole input.
-  config.wrappers :default, class: 'form-group',
-    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
+#  config.wrappers :default, class: 'form-group',
+#    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -17,11 +17,11 @@ SimpleForm.setup do |config|
 
     # Determines whether to use HTML5 (:email, :url, ...)
     # and required attributes
-    b.use :html5
+#    b.use :html5
 
     # Calculates placeholders automatically from I18n
     # You can also pass a string as f.input placeholder: "Placeholder"
-    b.use :placeholder
+#    b.use :placeholder
 
     ## Optional extensions
     # They are disabled unless you pass `f.input EXTENSION_NAME => :lookup`
@@ -30,53 +30,53 @@ SimpleForm.setup do |config|
     # extensions by default, you can change `b.optional` to `b.use`.
 
     # Calculates maxlength from length validations for string inputs
-    b.optional :maxlength
+#    b.optional :maxlength
 
     # Calculates pattern from format validations for string inputs
-    b.optional :pattern
+#    b.optional :pattern
 
     # Calculates min and max from length validations for numeric inputs
-    b.optional :min_max
+#    b.optional :min_max
 
     # Calculates readonly automatically from readonly attributes
-    b.optional :readonly
+#    b.optional :readonly
 
     ## Inputs
     #
-    b.use :label, wrap_with: { tag: :div, class: 'col-xs-8 text-right'}
-    b.use :input, wrap_with: { tag: :div, class: 'col-xs-14'}
-    b.use :error, wrap_with: { tag: :span, class: 'error text-danger col-xs-14 col-xs-offset-8' }
-    b.use :hint,  wrap_with: { tag: :span, class: 'hint col-xs-14 col-xs-offset-8' }
-  end
+#    b.use :label, wrap_with: { tag: :div, class: 'col-xs-8 text-right'}
+#    b.use :input, wrap_with: { tag: :div, class: 'col-xs-14'}
+#    b.use :error, wrap_with: { tag: :span, class: 'error text-danger col-xs-14 col-xs-offset-8' }
+#    b.use :hint,  wrap_with: { tag: :span, class: 'hint col-xs-14 col-xs-offset-8' }
+#  end
 
-  config.wrappers :search, class: 'form-group',
-    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
-    b.use :placeholder
-    b.optional :maxlength
-    b.optional :pattern
-    b.optional :min_max
-    b.optional :readonly
+#  config.wrappers :search, class: 'form-group',
+#    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
+#    b.use :placeholder
+#    b.optional :maxlength
+#    b.optional :pattern
+#    b.optional :min_max
+#    b.optional :readonly
 
     ## Inputs
-    b.use :label
-    b.use :input, wrap_with: { tag: :div }
-    b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
-  end
+#    b.use :label
+#    b.use :input, wrap_with: { tag: :div }
+#    b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
+#  end
 
   # The default wrapper to be used by the FormBuilder.
-  config.default_wrapper = :default
+#  config.default_wrapper = :default
 
   # You can define the class to use on all labels. Default is nil.
-  config.label_class = 'control-label'
+#  config.label_class = 'control-label'
 
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.
   #   inline: input + label
   #   nested: label > input
-  config.boolean_style = :nested
+#  config.boolean_style = :nested
 
   # Default class for buttons
-  config.button_class = 'btn'
+#  config.button_class = 'btn'
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -84,10 +84,10 @@ SimpleForm.setup do |config|
   # config.error_method = :first
 
   # Default tag used for error notification helper.
-  config.error_notification_tag = :div
+#  config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'alert alert-error'
+#  config.error_notification_class = 'alert alert-error'
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -116,7 +116,7 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all forms. Default is simple_form.
-  config.default_form_class = 'simple_form'
+#  config.default_form_class = 'simple_form'
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
@@ -129,7 +129,7 @@ SimpleForm.setup do |config|
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
   # change this configuration to true.
-  config.browser_validations = false
+#  config.browser_validations = false
 
   # Collection of methods to detect if a file type was given.
   # config.file_methods = [ :mounted_as, :file?, :public_filename ]
@@ -159,18 +159,18 @@ SimpleForm.setup do |config|
   # config.cache_discovery = !Rails.env.development?
 
   # Default class for inputs
-  config.input_class = 'form-control'
-end
+#  config.input_class = 'form-control'
+#end
 
-module SimpleForm
-  class FormBuilder
-    def lookup_model_names_with_custom_scope
-      if scope = options[:scope]
-        lookup_model_names_without_custom_scope + [scope.to_s]
-      else
-        lookup_model_names_without_custom_scope
-      end
-    end
+#module SimpleForm
+#  class FormBuilder
+#    def lookup_model_names_with_custom_scope
+#      if scope = options[:scope]
+#        lookup_model_names_without_custom_scope + [scope.to_s]
+#      else
+#        lookup_model_names_without_custom_scope
+#3      end
+#    end
 
-  end
-end
+#  end
+#end

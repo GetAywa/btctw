@@ -2,15 +2,15 @@
 # Doorkeeper controllers.
 class ActionController::Base
 
-  before_action :set_language
+#  before_action :set_language
 
-  private
+#  private
 
-  def set_language
-    cookies[:lang] = params[:lang] unless params[:lang].blank?
-    locale = cookies[:lang] || http_accept_language.compatible_language_from(I18n.available_locales)
-    I18n.locale = locale if locale && I18n.available_locales.include?(locale.to_sym)
-  end
+#  def set_language
+#    cookies[:lang] = params[:lang] unless params[:lang].blank?
+#    locale = cookies[:lang] || http_accept_language.compatible_language_from(I18n.available_locales)
+#    I18n.locale = locale if locale && I18n.available_locales.include?(locale.to_sym)
+#  end
 
   def set_redirect_to
     if request.get?

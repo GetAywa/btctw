@@ -3,9 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
-<<<<<<< HEAD
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+gem 'railties'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
@@ -35,13 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
-=======
+gem 'bootsnap'
 gem 'simple_form', '~> 4.0.1'
-gem 'slim-rails'
-gem 'sass-rails'
-gem 'coffee-rails'
-gem 'uglifier'
 gem "jquery-rails"
 gem "angularjs-rails"
 gem 'bootstrap-sass', '~> 3.2.0.2'
@@ -61,20 +56,26 @@ gem 'rack-attack', '~> 3.0.0'
 gem 'easy_table'
 gem 'phonelib', '~> 0.3.5'
 gem 'twilio-ruby', '~> 3.11'
-<<<<<<< HEAD
-gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
 gem 'rake', '~> 12.3.1'
 gem 'did_you_mean' , '~> 1.2.0'
-=======
 gem 'unread', github: 'Apollo-IT/unread'
 gem 'carrierwave', '~> 1.2.3'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
+gem 'activesupport'
+gem 'aasm'
+gem 'gon'
+gem 'active_hash'
+gem 'enumerize'
+gem 'acts-as-taggable-on'
+gem 'omniauth'
+gem 'slim-rails'
+gem 'middleware'
+gem 'rails-i18n'
+#gem 'rspec-rail'
 #gem 'paper_trail', '~> 3.0.9'
->>>>>>> e9ecf4be23c953134eb4a738942dc3db6d7465dd
->>>>>>> 15cfb4a2103ea34d98c08fe4bf786a9703a3ea3e
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -87,7 +88,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 
 group :test do

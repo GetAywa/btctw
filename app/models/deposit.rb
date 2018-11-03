@@ -2,9 +2,8 @@ class Deposit < ActiveRecord::Base
   STATES = [:submitting, :cancelled, :submitted, :rejected, :accepted, :checked, :warning]
 
   extend Enumerize
-
-  include AASM
-  include AASM::Locking
+#  include AASM
+#  include AASM::Locking
   include Currencible
 
   enumerize :aasm_state, in: STATES, scope: true
